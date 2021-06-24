@@ -1,0 +1,9 @@
+---
+- name: Restart Service
+  hosts: all
+  tasks:
+    - name: Restart HTTP Service
+      systemd:
+        name: httpd
+        state: restarted
+...

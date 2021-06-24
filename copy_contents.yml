@@ -1,0 +1,9 @@
+---
+- name: Copy Contents to file on Multiple Managed Nodes
+  hosts: all
+  tasks:
+    - name: Copy contents to a file owned by root
+      copy:
+        dest: /tmp/resolv.conf
+        content: "nameserver	node1.example.com\n"
+...
